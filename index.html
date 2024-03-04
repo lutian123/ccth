@@ -7,69 +7,46 @@
     <style>
         body { margin: 0; }
         canvas { display: block; width: 100%; height: 100%; }
-        #loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 1s ease-out;
-            opacity: 1;
-            visibility: visible;
-            z-index: 100;
-        }
-        .hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
     </style>
 </head>
 <body>
-<div id="loading-screen">模型加载中...</div>
 <script src="https://threejs.org/build/three.js"></script>
+<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
 <script src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
 <script>
-    let scene, camera, renderer;
-    const loadingScreen = document.getElementById('loading-screen');
+    let scene, camera, renderer, controls;
 
     function init() {
         scene = new THREE.Scene();
         camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        renderer = new THREE.WebGLRenderer({antialias: true});
+        renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
 
-        const ambientLight = new THREE.AmbientLight(0x404040);
-        scene.add(ambientLight);
+        const light = new THREE.HemisphereLight(0xffffff, 0x444444);
+        light.position.set(0, 20, 0);
+        scene.add(light);
 
-        window.addEventListener('resize', onWindowResize, false);
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.addEventListener('change', render); // use if there is no animation loop
+        controls.minDistance = 2;
+        controls.maxDistance = 10;
+        controls.target.set(0, 0, -0.2);
+        controls.update();
+
+        camera.position.set(0, 0, 5);
 
         const loader = new THREE.GLTFLoader();
         loader.load('hhcc.glb', function (gltf) {
             scene.add(gltf.scene);
-            loadingScreen.classList.add('hidden'); // Hide loading screen when model is loaded
-            animate();
+            render(); // Call render if you're not using an animation loop
         }, undefined, function (error) {
-            console.error('An error happened during loading model:', error);
-            loadingScreen.innerHTML = "模型加载失败，请检查控制台了解详情。";
+            console.error('An error happened:', error);
         });
-
-        camera.position.z = 5;
     }
 
-    function animate() {
-        requestAnimationFrame(animate);
+    function render() {
         renderer.render(scene, camera);
-    }
-
-    function onWindowResize() {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
     }
 
     init();
