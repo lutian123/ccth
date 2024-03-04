@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D模型展示</title>
     <style>
         body { margin: 0; }
@@ -17,32 +16,51 @@
     let scene, camera, renderer, controls;
 
     function init() {
+        // 场景
         scene = new THREE.Scene();
+
+        // 摄像机
         camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        renderer = new THREE.WebGLRenderer();
+        camera.position.set(0, 0, 5);
+
+        // 渲染器
+        renderer = new THREE.WebGLRenderer({antialias: true});
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.body.appendChild(renderer.domElement);
 
-        const light = new THREE.HemisphereLight(0xffffff, 0x444444);
-        light.position.set(0, 20, 0);
-        scene.add(light);
+        // 灯光
+        const ambientLight = new THREE.AmbientLight(0xcccccc, 0.4);
+        scene.add(ambientLight);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+        directionalLight.position.set(1, 1, 0).normalize();
+        scene.add(directionalLight);
 
+        // 控制器
         controls = new THREE.OrbitControls(camera, renderer.domElement);
-        controls.addEventListener('change', render); // use if there is no animation loop
+        controls.addEventListener('change', render);
         controls.minDistance = 2;
         controls.maxDistance = 10;
         controls.target.set(0, 0, -0.2);
         controls.update();
 
-        camera.position.set(0, 0, 5);
-
+        // 加载GLB模型
         const loader = new THREE.GLTFLoader();
-        loader.load('hhcc.glb', function (gltf) {
+        loader.load('hhcc.glb', function(gltf) {
             scene.add(gltf.scene);
-            render(); // Call render if you're not using an animation loop
-        }, undefined, function (error) {
-            console.error('An error happened:', error);
+            render(); // 需要时渲染场景
+        }, undefined, function(error) {
+            console.error('模型加载出错:', error);
         });
+
+        // 窗口大小变化处理
+        window.addEventListener('resize', onWindowResize, false);
+    }
+
+    function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        render();
     }
 
     function render() {
