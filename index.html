@@ -15,21 +15,21 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/vendor.css">
+    <link rel="stylesheet" href="CC_CV/css/base.css">
+    <link rel="stylesheet" href="CC_CV/css/main.css">
+    <link rel="stylesheet" href="CC_CV/css/vendor.css">
 
 
     <!-- script
     ================================================== -->
-    <script src="./js/modernizr.js"></script>
+    <script src="CC_CV/js/modernizr.js"></script>
 
     <!-- favicons
     ================================================== -->
-<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-<link rel="manifest" href="./site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="CC_CV/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="CC_CV/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="CC_CV/favicon-16x16.png">
+<link rel="manifest" href="CC_CV/site.webmanifest">
 
 <style>
     .video-container {
@@ -45,6 +45,21 @@
         width: 100%;
         height: 100%;
     }
+
+
+
+    .iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    height: 60vh; /* Set container height to full viewport height */
+}
+
+.iframe-container iframe {
+    width: 80%;
+    height: 100%; /* Make iframe fill container */
+}
+
 </style>
 
 
@@ -69,7 +84,7 @@
   <header class="s-header">
         <div class="header-logo">
             <a href="index.html">
-                <img src="./images/logo.png" alt="Homepage">
+                <img src="CC_CV/images/logo.png" alt="Homepage">
             </a>
         </div>
 
@@ -77,18 +92,25 @@
     
            <nav class="row header-nav-wrap">
     <ul class="header-nav">
-        <li><a class="smoothscroll" href="#hero" title="Intro" style="font-size: 23px;">主页</a></li>
-        <li><a class="smoothscroll" href="#about" title="About" style="font-size: 23px;">关于我</a></li>
+        <li><a href="index.html" style="font-size: 23px;">欢迎</a></li>  
+        <li><a href="main.html" style="font-size: 23px;">主页</a></li>
+        <li><a class="smoothscroll" href="#about" title="About" style="font-size: 23px;">关于</a></li>
         <li><a class="smoothscroll" href="#services" title="Services" style="font-size: 23px;">专长</a></li>
         <li><a class="smoothscroll" href="#portfolio" title="Works" style="font-size: 23px;">作品</a></li>
-        <li><a href="https://www.notion.so/_-WSICONG-SHOWREEL-f7753aa2fadd463c8e06d936c7ba391d?pm=c" style="font-size: 20px;">似匆似享</a></li>
-        <li><a href="https://github.com/" style="font-size: 20px;">git</a></li>       
+        <li><a href="https://www.720yun.com/vr/704jzzewkn7" style="font-size: 23px;">综展</a></li>  
         <li><a href="mailto:#0" title="Contact us" style="font-size: 23px;">联系</a></li>
-    </ul>
+        <li><a href="CC_USE/CC_USE.html" style="font-size: 23px;">行用</a></li>   
+        <li><a href="cc_art_works/ccwroks.html" style="font-size: 23px;">效果图</a></li>
+        <li><a href="CC_FTG/CC_FTG.html" style="font-size: 23px;">素材</a></li>
+        <li><a href="CC_BLOG/CC_BLOG.html" style="font-size: 23px;">博客</a></li>
+        <li><a href="CC_FILES/CC_FILES.html" style="font-size: 23px;">文件</a></li>
+        <li><a href="cc_video/cc_video.html" style="font-size: 23px;">视频</a></li>
+
+    </ul>   
 </nav> <!-- end header-nav-wrap -->
 
 
-            <a href="#0" class="btn btn--stroke btn--small">Download CV</a>
+            <a href="https://ccyt-1302286795.cos.ap-nanjing.myqcloud.com/%E7%8E%8B%E6%80%9D%E8%81%AA%E7%AE%80%E5%8E%862024.png" style="font-size: 20px;" class="btn btn--stroke btn--small">下载资料</a>
 
         </div> <!-- end header-content -->
 
@@ -99,7 +121,7 @@
 
     <!-- hero
     ================================================== -->
-    <section id="hero" class="s-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg-3000.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <section id="hero" class="s-hero target-section" data-parallax="scroll" data-image-src="CC_CV/images/hero-bg-3000.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="row hero-content">
 
@@ -107,7 +129,7 @@
 
                 <h1>
                 王思聪<br>
-                综合动画设计师<br>
+                数字视效设计师<br>
                 涉及三维、虚拟现实、AIGC <br>
                 BASE北京
                 </h1>
@@ -116,12 +138,15 @@
                     <li>
                         <a href="https://www.notion.so/_-WSICONG-SHOWREEL-f7753aa2fadd463c8e06d936c7ba391d?pm=c" title="">似匆似享</a>
                     </li>
+
+
+            
+
+
                     <li>
-                        <a href="#0" title="">Behance</a>
+                        <a href="https://www.720yun.com/vrframe?id=16034157" hall roam="">环动图</a>
                     </li>
-                    <li>
-                        <a href="#0" title="">Dribbble</a>
-                    </li>
+
                 </ul> <!-- end hero-social -->
 
             </div> 
@@ -137,6 +162,91 @@
     </section> <!-- end s-hero -->
 
 
+
+ <!-- portfolio section -->
+    <section id="portfolio" class="s-portfolio target-section">
+        <div class="row s-portfolio__header">
+            <div class="column large-6 medium-8 tab-full">
+                <div class="section-intro" data-num="01" data-aos="fade-up">
+                    <h3 class="subhead">近期作品</h3>
+                    <h1 class="display-1">三维互动示万千</h1>
+                </div>
+            </div>
+        </div> <!-- s-portfolio__header -->
+        
+    
+        <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
+
+            <!-- Video 1 -->
+            <div class="column" data-aos="fade-up">
+                <div class="video-container">
+                    <iframe src="https://1302286795.vod-qcloud.com/58aeeb3cvodtranssh1302286795/1af91d1c1397757896423693185/v.f100040.mp4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="video-description">WSCIONG动画作品集锦</p>
+            </div>
+
+
+            <!-- Video 2 -->
+            <div class="column" data-aos="fade-up">
+                <div class="video-container">
+                    <iframe src="https://1302286795.vod-qcloud.com/58aeeb3cvodtranssh1302286795/17c791ad1397757886364343103/v.f100840.mp4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="video-description">结合AIGC的动画作品</p>
+            </div>
+            <!-- Video 3 -->
+            <div class="column" data-aos="fade-up">
+                <div class="video-container">
+                    <iframe src="https://1302286795.vod-qcloud.com/58aeeb3cvodtranssh1302286795/62f0beb21397757896424447114/v.f100040.mp4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="video-description">领克Z10设计篇</p>
+            </div>
+            <!-- Video 4 -->
+            <div class="column" data-aos="fade-up">
+                <div class="video-container">
+                    <iframe src="https://1302286795.vod-qcloud.com/f9bb7475vodtranscq1302286795/96fb7a631397757887498942462/v.f100840.mp4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="video-description">主动脉瓣手术演示</p>
+            </div>
+            <!-- Video 5 -->
+            <div class="column" data-aos="fade-up">
+                <div class="video-container">
+                    <iframe src="https://1302286795.vod-qcloud.com/58aeeb3cvodtranssh1302286795/b263d1e01397757896425566368/v.f100040.mp4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="video-description">极客009功能视频</p>
+            </div>
+            <!-- Video 6 -->    
+            <div class="column" data-aos="fade-up">
+                <div class="video-container">
+                    <iframe src="https://1302286795.vod-qcloud.com/f9bb7475vodtranscq1302286795/d25161cc1397757886013432229/v.f100840.mp4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="video-description">基因大会</p>
+            </div>
+                 <!-- Video 7 -->
+                 <div class="column" data-aos="fade-up">
+                    <div class="video-container">
+                        <iframe src="https://1302286795.vod-qcloud.com/58aeeb3cvodtranssh1302286795/92fdca051397757886576898215/v.f100840.mp4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p class="video-description">沣东新城L屏</p>
+                </div>
+                <!-- Video 8 -->    
+                <div class="column" data-aos="fade-up">
+                    <div class="video-container">
+                        <iframe src="https://1302286795.vod-qcloud.com/58aeeb3cvodtranssh1302286795/8d836f571397757896428044293/v.f100040.mp4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p class="video-description">角色动画相关</p>
+                </div>
+        </div> <!-- s-portfolio__list -->
+    </section> <!-- end portfolio section -->
+
+
+    <div class="iframe-container">
+        <iframe src="https://www.720yun.com/vr/704jzzewkn7" frameborder="no" width="100%" height="100%"></iframe>
+    </div>
+    
+
+  
+
+
     <!-- about
     ================================================== -->
     <section id="about" class="s-about target-section">
@@ -148,33 +258,40 @@
             <div class="row">
                 <div class="column large-6 medium-8 tab-full">
 
-                    <div class="section-intro" data-num="01" data-aos="fade-up">
+                    <div class="section-intro" data-num="02" data-aos="fade-up">
                         <h3 class="subhead">About Me</h3>
                         <h1 class="display-1">疾风知劲草 立向新征程</h1>
                     </div>
 
                     <div class="profile-pic" data-aos="fade-up">
-                        <img src="images/profile-pic.jpg" 
-                             srcset="images/profile-pic.jpg 1x, images/profile-pic@2x.jpg 2x" alt="">
+                        <img src="CC_CV/images/profile-pic.jpg" 
+                             srcset="CC_CV/images/profile-pic.jpg 1x, CC_CV/images/profile-pic@2x.jpg 2x" alt="">
                     </div>
 
                     <h1 data-aos="fade-up">自我介绍下</h1>
 
                     <p data-aos="fade-up">
 
-               我是思聪，三维动画设计师。我的具体工作涉及三维动画、UE动画以及AIGC。<br><br>
+               我是思聪，三维动画制作多面手。我的具体工作涉及三维动画、UE动画以及AIGC。<br><br>
+
                
-               我曾在丝路视觉、伟景行以及水晶石任职，总体的职业路线在建筑可视化
+               
+               我曾在顶点视觉、水晶石、丝路视觉以及伟景行任职，总体的职业路线在汽车及产品可视化
                三维动画方面，也在其他领域如新东方和泽桥传媒任职，分别涉及教育行业以及医疗传媒，这些工作涉足了虚拟现实和数字的制作，<br><br>
                
-               这些年的工作经历使我具备了三维动画独立制作能力，可通过 UE 将动画产品与虚拟现实结合，提升产品的互动与真实感，结合 AIGC  技术为动画制作提速提鲜，对于三维软件具有
+               这些年的工作经历使我具备了三维动画独立制作能力，可根据需要选择适合的 DCC工具，可通过 UE 将动画产品与虚拟现实结合，提升产品的互动与真实感，结合AIGC技术为动画制作提速提鲜，对于三维软件具有
                综合认知，可根据项目的需要来选择更加适合的软件。具备带领3到10人 UE  动画及传统三维动画团队推进跨部门协作的工作经验。
                     </p>
 
                 </div>
             </div>
 
-        </div> <!-- end s-about__section--profile -->
+
+
+  </div> <!-- end s-about__section--profile -->
+
+
+
 
         <div class="s-about__section">
 
@@ -185,6 +302,31 @@
             </div>
 
             <div class="row block-large-1-2 block-900-full work-positions">
+
+
+
+
+
+                <div class="column" data-aos="fade-up">
+                    <div class="position">
+                        <div class="position__header">
+                            <h6>
+                                <span class="position__co">顶点视觉</span>
+                                <span class="position__pos">制作总监</span>
+                            </h6>
+                            <div class="position__timeframe">
+                                4 2024 - 10 2024
+                            </div>
+                        </div>
+
+                        <p>
+                            汽车效果图与动画影片的灯光与渲染，对影片及效果图的最终效果负责，对于场景材质和灯光信息优化，参与项目zeek009 、lynkco 007、长安启源 
+                        </p>
+                    </div>
+                </div> <!-- end column -->
+
+
+
 
                 <div class="column" data-aos="fade-up">
                     <div class="position">
@@ -203,6 +345,8 @@
                         </p>
                     </div>
                 </div> <!-- end column -->
+
+
                 <div class="column" data-aos="fade-up">
                     <div class="position">
                         <div class="position__header">
@@ -211,7 +355,7 @@
                                 <span class="position__pos">三维动画设计师</span>
                             </h6>
                             <div class="position__timeframe">
-                                August 2015 - June 2017
+                                3 2021 - 10 2022
                             </div>
                         </div>
 
@@ -220,6 +364,10 @@
                         </p>
                     </div>
                 </div> <!-- end column -->
+
+
+
+
                 <div class="column" data-aos="fade-up">
                     <div class="position">
                         <div class="position__header">
@@ -271,7 +419,7 @@
             <div class="vert-line"></div>
 
             <div class="column large-6 s-services__leftcol">
-                <div class="section-intro" data-num="02" data-aos="fade-up">
+                <div class="section-intro" data-num="03" data-aos="fade-up">
                     <h3 class="subhead">Expertise</h3>
 
                     <h1 class="display-1">
@@ -324,64 +472,7 @@
     </section> <!-- end s-services -->
 
 
-    <!-- portfolio section -->
-    <section id="portfolio" class="s-portfolio target-section">
-        <div class="row s-portfolio__header">
-            <div class="column large-6 medium-8 tab-full">
-                <div class="section-intro" data-num="03" data-aos="fade-up">
-                    <h3 class="subhead">Portfolio</h3>
-                    <h1 class="display-1">一些近期制作的项目</h1>
-                </div>
-            </div>
-        </div> <!-- s-portfolio__header -->
-        
-    
-        <div class="row s-portfolio__list block-large-1-2 block-tab-full collapse">
-            <!-- Video 1 -->
-            <div class="column" data-aos="fade-up">
-                <div class="video-container">
-                    <iframe src="https://1302286795.vod-qcloud.com/f9bb7475vodtranscq1302286795/2c7de73f1397757885972829171/v.f100840.mp4" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p class="video-description">WSCIONG动画作品集锦</p>
-            </div>
-            <!-- Video 2 -->
-            <div class="column" data-aos="fade-up">
-                <div class="video-container">
-                    <iframe src="https://1302286795.vod-qcloud.com/58aeeb3cvodtranssh1302286795/4f5495dd1397757885969313346/v.f100840.mp4" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p class="video-description">结合AIGC的动画作品</p>
-            </div>
-            <!-- Video 3 -->
-            <div class="column" data-aos="fade-up">
-                <div class="video-container">
-                    <iframe src="https://1302286795.vod-qcloud.com/f9bb7475vodtranscq1302286795/1d1decf21397757886014358128/v.f100840.mp4" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p class="video-description">海啸疗法护肤品效果演示</p>
-            </div>
-            <!-- Video 4 -->
-            <div class="column" data-aos="fade-up">
-                <div class="video-container">
-                    <iframe src="https://1302286795.vod-qcloud.com/f9bb7475vodtranscq1302286795/afec96851397757886016034401/v.f100840.mp4" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p class="video-description">主动脉瓣手术演示</p>
-            </div>
-            <!-- Video 5 -->
-            <div class="column" data-aos="fade-up">
-                <div class="video-container">
-                    <iframe src="https://1302286795.vod-qcloud.com/58aeeb3cvodtranssh1302286795/23f719511397757886014634607/v.f100840.mp4" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p class="video-description">艾美酒店</p>
-            </div>
-            <!-- Video 6 -->    
-            <div class="column" data-aos="fade-up">
-                <div class="video-container">
-                    <iframe src="https://1302286795.vod-qcloud.com/f9bb7475vodtranscq1302286795/d25161cc1397757886013432229/v.f100840.mp4" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <p class="video-description">基因大会</p>
-            </div>
-        </div> <!-- s-portfolio__list -->
-    </section> <!-- end portfolio section -->
-
+   
 
    
 
@@ -500,9 +591,9 @@
 
     <!-- Java Script
     ================================================== -->
-   <script src="./js/jquery-3.2.1.min.js"></script>
-    <script src="./js/plugins.js"></script>
-    <script src="./js/main.js"></script>
+   <script src="CC_CV/js/jquery-3.2.1.min.js"></script>
+    <script src="CC_CV/js/plugins.js"></script>
+    <script src="CC_CV/js/main.js"></script>
 
 
 </body>
